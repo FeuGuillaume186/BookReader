@@ -91,17 +91,25 @@ menuItems.forEach((item) => {
 const darkmode = document.getElementById('toggle-darkmode')
 const lightmode = document.getElementById('toggle-lightmode')
 const osmode = document.getElementById('toggle-osmode')
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
 let currentThemeMode = localStorage.getItem('themeMode')
 
-const setThemeMode = () => {
+const setThemeMode = (event) => {
     if(currentThemeMode == 'os') {
-        if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        if(event.matches) {
             // Le thème sombre est préféré par l'utilisateur
             currentThemeMode = 'dark'
         } else {
             // Le thème clair est préféré par l'utilisateur
             currentThemeMode = 'light'
         }
+        // if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        //     // Le thème sombre est préféré par l'utilisateur
+        //     currentThemeMode = 'dark'
+        // } else {
+        //     // Le thème clair est préféré par l'utilisateur
+        //     currentThemeMode = 'light'
+        // }
         lightmode.classList.remove('violet')
         darkmode.classList.remove('violet')
         if(!osmode.classList.contains('purple'))
@@ -123,7 +131,8 @@ const setThemeMode = () => {
     }
 }
 
-setThemeMode()
+mediaQuery.addEventListener(setThemeMode)
+setThemeMode(mediaQuery)
 
 darkmode
     .onclick = () => {
