@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <title>Book Reader</title>
+
+    <!-- Local Styles CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/explore.css">
+    <link rel="stylesheet" href="css/profile.css">
+
+    <!-- Semantic UI -->
+    <script src="res/semantic-ui/jquery@3.4.1.js"></script>
+    <script src="res/semantic-ui/semantic.min.js"></script>
+    <link rel="stylesheet" href="res/semantic-ui/semantic.min.css">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- <link rel="icon" sizes="192x192" href="assets/OC-favicon-zoom.png"> -->
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Book Reader">
+    <!-- <link rel="apple-touch-icon-precomposed" href="assets/OC-favicon-zoom.png"> -->
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <!-- <meta name="msapplication-TileImage" content="assets/OC-icon-transparent-notext-zoom.png"> -->
+    <meta name="msapplication-TileColor" content="#000000">
+    <!-- <link rel="shortcut icon" href="assets/OC-icon-transparent-notext-zoom.png"> -->
+</head>
+
+<body class="">
+    <main id="app">
+        <header id="topbar">
+            <div class="current-user">
+                <img class="ui avatar image mini" src="assets/avatar/large/elyse.png" />
+            </div>
+
+            <div class="tools">
+                <div class="tool-theme">
+                    <div class="ui icon buttons">
+                        <button class="ui violet button active" id="toggle-lightmode">
+                          <i class="sun icon"></i>
+                        </button>
+                        <button class="ui button" id="toggle-darkmode">
+                          <i class="moon icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tool-notif">
+                    <i class="bell icon large"></i>
+                </div>
+
+                <div class="tool-search">
+                    <input type="text" placeholder="Rechercher...">
+                    <i class="search icon large" id="toggle-search-bar" style="cursor: pointer;"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="page" id="home_page" hidden>
+            <section class="follow">
+                <h1 class="follow-title">Suivies</h1>
+                <div class="book-list">
+                    <div class="book">
+                        <div class="info">
+                            <h1 class="book-title">Captain Ship</h1>
+                            <div class="user">
+                                <img class="ui avatar image" src="assets/avatar/large/matthew.png" alt="">
+                                <span>Matthew</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="info">
+                            <h1 class="book-title">Twilight Princess</h1>
+                            <div class="user">
+                                <img class="ui avatar image" src="assets/avatar/large/elyse.png" alt="">
+                                <span>Elyse</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="info">
+                            <h1 class="book-title">The Revelation</h1>
+                            <div class="user">
+                                <img class="ui avatar image" src="assets/avatar/large/kristy.png" alt="">
+                                <span>kristy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="info">
+                            <h1 class="book-title">Sunset</h1>
+                            <div class="user">
+                                <img class="ui avatar image" src="assets/avatar/large/molly.png" alt="">
+                                <span>Molly</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="info">
+                            <h1 class="book-title">Ookami</h1>
+                            <div class="user">
+                                <img class="ui avatar image" src="assets/avatar/large/kristy.png" alt="">
+                                <span>kristy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="info">
+                            <h1 class="book-title">The Cameras</h1>
+                            <div class="user">
+                                <img class="ui avatar image" src="assets/avatar/large/matthew.png" alt="">
+                                <span>Matthew</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="popular">
+                <h1 class="popular-title">Populaires</h1>
+                <div class="book-list">
+                    <div class="book">
+                        <aside class="book-infos">
+                            <div class="book-author">
+                                <img class="ui avatar image" src="assets/avatar/large/molly.png" alt="">
+                                <span class="name">Molly Dee</span>
+                            </div>
+                            <h3 class="book-title">Night Heroes</h3>
+                            <p class="book-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa veniam expedita hic cupiditate nisi fuga id nam, ratione, recusandae quidem consequatur perferendis? Saepe tempora exercitationem reprehenderit cupiditate ea voluptas.</p>
+                            <ul class="book-tags">
+                                <li class="tag">#Romance</li>
+                                <li class="tag">#Thriller</li>
+                                <li class="tag">#Teens</li>
+                                <li class="tag">#Mystery</li>
+                                <li class="tag">#Dance</li>
+                            </ul>
+                        </aside>
+
+                        <aside class="book-activity">
+                            <span class="like">
+                                <i class="heart outline icon"></i>
+                                <label>20</label>
+                            </span>
+                            <span class="comment">
+                                <i class="comment alternate icon"></i>
+                                <label>340</label>
+                            </span>
+                            <span class="share">
+                                <i class="share icon"></i>
+                                <label>13</label>
+                            </span>
+                            <span class="read">
+                                <i class="eye icon"></i>
+                                <label>2.6k</label>
+                            </span>
+                        </aside>
+                    </div>
+                    <div class="book">
+                        <aside class="book-infos">
+                            <div class="book-author">
+                                <img class="ui avatar image" src="assets/avatar/large/molly.png" alt="">
+                                <span class="name">Molly Dee</span>
+                            </div>
+                            <h3 class="book-title">Night Heroes</h3>
+                            <p class="book-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa veniam expedita hic cupiditate nisi fuga id nam, ratione, recusandae quidem consequatur perferendis? Saepe tempora exercitationem reprehenderit cupiditate ea voluptas.</p>
+                            <ul class="book-tags">
+                                <li class="tag">#Romance</li>
+                                <li class="tag">#Thriller</li>
+                                <li class="tag">#Teens</li>
+                                <li class="tag">#Mystery</li>
+                                <li class="tag">#Dance</li>
+                            </ul>
+                        </aside>
+
+                        <aside class="book-activity">
+                            <span class="like">
+                                <i class="heart outline icon"></i>
+                                <label>20</label>
+                            </span>
+                            <span class="comment">
+                                <i class="comment alternate icon"></i>
+                                <label>340</label>
+                            </span>
+                            <span class="share">
+                                <i class="share icon"></i>
+                                <label>13</label>
+                            </span>
+                            <span class="read">
+                                <i class="eye icon"></i>
+                                <label>2.6k</label>
+                            </span>
+                        </aside>
+                    </div>
+                    <div class="book">
+                        <aside class="book-infos">
+                            <div class="book-author">
+                                <img class="ui avatar image" src="assets/avatar/large/molly.png" alt="">
+                                <span class="name">Molly Dee</span>
+                            </div>
+                            <h3 class="book-title">Night Heroes</h3>
+                            <p class="book-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa veniam expedita hic cupiditate nisi fuga id nam, ratione, recusandae quidem consequatur perferendis? Saepe tempora exercitationem reprehenderit cupiditate ea voluptas.</p>
+                            <ul class="book-tags">
+                                <li class="tag">#Romance</li>
+                                <li class="tag">#Thriller</li>
+                                <li class="tag">#Teens</li>
+                                <li class="tag">#Mystery</li>
+                                <li class="tag">#Dance</li>
+                            </ul>
+                        </aside>
+
+                        <aside class="book-activity">
+                            <span class="like">
+                                <i class="heart outline icon"></i>
+                                <label>20</label>
+                            </span>
+                            <span class="comment">
+                                <i class="comment alternate icon"></i>
+                                <label>340</label>
+                            </span>
+                            <span class="share">
+                                <i class="share icon"></i>
+                                <label>13</label>
+                            </span>
+                            <span class="read">
+                                <i class="eye icon"></i>
+                                <label>2.6k</label>
+                            </span>
+                        </aside>
+                    </div>
+                    <div class="book">
+                        <aside class="book-infos">
+                            <div class="book-author">
+                                <img class="ui avatar image" src="assets/avatar/large/molly.png" alt="">
+                                <span class="name">Molly Dee</span>
+                            </div>
+                            <h3 class="book-title">Night Heroes</h3>
+                            <p class="book-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa veniam expedita hic cupiditate nisi fuga id nam, ratione, recusandae quidem consequatur perferendis? Saepe tempora exercitationem reprehenderit cupiditate ea voluptas.</p>
+                            <ul class="book-tags">
+                                <li class="tag">#Romance</li>
+                                <li class="tag">#Thriller</li>
+                                <li class="tag">#Teens</li>
+                                <li class="tag">#Mystery</li>
+                                <li class="tag">#Dance</li>
+                            </ul>
+                        </aside>
+
+                        <aside class="book-activity">
+                            <span class="like">
+                                <i class="heart outline icon"></i>
+                                <label>20</label>
+                            </span>
+                            <span class="comment">
+                                <i class="comment alternate icon"></i>
+                                <label>340</label>
+                            </span>
+                            <span class="share">
+                                <i class="share icon"></i>
+                                <label>13</label>
+                            </span>
+                            <span class="read">
+                                <i class="eye icon"></i>
+                                <label>2.6k</label>
+                            </span>
+                        </aside>
+                    </div>
+                    <div class="book">
+                        <aside class="book-infos">
+                            <div class="book-author">
+                                <img class="ui avatar image" src="assets/avatar/large/molly.png" alt="">
+                                <span class="name">Molly Dee</span>
+                            </div>
+                            <h3 class="book-title">Night Heroes</h3>
+                            <p class="book-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa veniam expedita hic cupiditate nisi fuga id nam, ratione, recusandae quidem consequatur perferendis? Saepe tempora exercitationem reprehenderit cupiditate ea voluptas.</p>
+                            <ul class="book-tags">
+                                <li class="tag">#Romance</li>
+                                <li class="tag">#Thriller</li>
+                                <li class="tag">#Teens</li>
+                                <li class="tag">#Mystery</li>
+                                <li class="tag">#Dance</li>
+                            </ul>
+                        </aside>
+
+                        <aside class="book-activity">
+                            <span class="like">
+                                <i class="heart outline icon"></i>
+                                <label>20</label>
+                            </span>
+                            <span class="comment">
+                                <i class="comment alternate icon"></i>
+                                <label>340</label>
+                            </span>
+                            <span class="share">
+                                <i class="share icon"></i>
+                                <label>13</label>
+                            </span>
+                            <span class="read">
+                                <i class="eye icon"></i>
+                                <label>2.6k</label>
+                            </span>
+                        </aside>
+                    </div>
+                    <div class="book">
+                        <aside class="book-infos">
+                            <div class="book-author">
+                                <img class="ui avatar image" src="assets/avatar/large/molly.png" alt="">
+                                <span class="name">Molly Dee</span>
+                            </div>
+                            <h3 class="book-title">Night Heroes</h3>
+                            <p class="book-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa veniam expedita hic cupiditate nisi fuga id nam, ratione, recusandae quidem consequatur perferendis? Saepe tempora exercitationem reprehenderit cupiditate ea voluptas.</p>
+                            <ul class="book-tags">
+                                <li class="tag">#Romance</li>
+                                <li class="tag">#Thriller</li>
+                                <li class="tag">#Teens</li>
+                                <li class="tag">#Mystery</li>
+                                <li class="tag">#Dance</li>
+                            </ul>
+                        </aside>
+
+                        <aside class="book-activity">
+                            <span class="like">
+                                <i class="heart outline icon"></i>
+                                <label>20</label>
+                            </span>
+                            <span class="comment">
+                                <i class="comment alternate icon"></i>
+                                <label>340</label>
+                            </span>
+                            <span class="share">
+                                <i class="share icon"></i>
+                                <label>13</label>
+                            </span>
+                            <span class="read">
+                                <i class="eye icon"></i>
+                                <label>2.6k</label>
+                            </span>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="page" id="explore_page" hidden>
+            <h1 class="explore-title">Explorer</h1>
+            <div class="buttons">
+                <button class="ui violet button categorie">Catégories</button>
+                <div class="filter"><i class="sliders horizontal icon"></i></div>
+            </div>
+
+            <div class="book-list">
+                <div class="book">
+                    <div class="book-cover"></div>
+                    <h3 class="book-title">Singer Of The Flowers pink</h3>
+                </div>
+                <div class="book">
+                    <div class="book-cover"></div>
+                    <h3 class="book-title">Beautiful Sky</h3>
+                </div>
+                <div class="book">
+                    <div class="book-cover"></div>
+                    <h3 class="book-title">Girls</h3>
+                </div>
+                <div class="book">
+                    <div class="book-cover"></div>
+                    <h3 class="book-title">Montains</h3>
+                </div>
+                <div class="book">
+                    <div class="book-cover"></div>
+                    <h3 class="book-title">Blue Tree</h3>
+                </div>
+                <div class="book">
+                    <div class="book-cover"></div>
+                    <h3 class="book-title">Drown</h3>
+                </div>
+                <div class="book">
+                    <div class="book-cover"></div>
+                    <h3 class="book-title">Cityline</h3>
+                </div>
+                <div class="book">
+                    <div class="book-cover"></div>
+                    <h3 class="book-title">Herbivor</h3>
+                </div>
+                <div class="book">
+                    <div class="book-cover"></div>
+                    <h3 class="book-title">Flower's Charms</h3>
+                </div>
+                <div class="book">
+                    <div class="book-cover"></div>
+                    <h3 class="book-title">Girls vol.2</h3>
+                </div>
+                <div class="book">
+                    <div class="book-cover"></div>
+                    <h3 class="book-title">Me, You and The Sea</h3>
+                </div>
+                <div class="book">
+                    <div class="book-cover"></div>
+                    <h3 class="book-title">B. Hope</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="profile_page" hidden>
+            <div class="profile-photo">
+                <div class="functions">
+                    <button class="ui circular basic button icon"><i class="edit icon"></i></button>
+                    <button class="ui circular basic button icon"><i class="logout icon"></i></button>
+                </div>
+                <div class="profile-activity">
+                    <div class="followers">
+                        <span class="value">23</span>
+                        <label>Abonnés</label>
+                    </div>
+                    <div class="following">
+                        <span class="value">456</span>
+                        <label>Abonnements</label>
+                    </div>
+                    <div class="books-number">
+                        <span class="value">6</span>
+                        <label>livre(s)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-others">
+                <div class="identification">
+                    <div class="text">
+                        <span class="name">Eli Monade</span>
+                        <span class="mail">elimonade@gmail.com</span>
+                    </div>
+                    <div class="ui vertical animated basic circular button" tabindex="0">
+                        <div class="hidden content">Suivi</div>
+                        <div class="visible content">Suivre</div>
+                    </div>
+                </div>
+
+                <div class="about">
+                    <label>A propos</label>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt earum esse, eius ex similique odit impedit blanditiis atque, alias enim dolores iure veritatis ducimus magni at deserunt saepe ad est.</p>
+                </div>
+
+                <div class="my-books">
+                    <label>Mes Oeuvres (6)</label>
+                    <div class="list">
+                        <div class="book">
+                            <div class="book-cover"></div>
+                            <h3 class="book-title">Singer Of The Flowers pink</h3>
+                        </div>
+                        <div class="book">
+                            <div class="book-cover"></div>
+                            <h3 class="book-title">Beautiful Sky</h3>
+                        </div>
+                        <div class="book">
+                            <div class="book-cover"></div>
+                            <h3 class="book-title">Beautiful Sky</h3>
+                        </div>
+                        <div class="book">
+                            <div class="book-cover"></div>
+                            <h3 class="book-title">Girls</h3>
+                        </div>
+                        <div class="book">
+                            <div class="book-cover"></div>
+                            <h3 class="book-title">Montains</h3>
+                        </div>
+                        <div class="book">
+                            <div class="book-cover"></div>
+                            <h3 class="book-title">Blue Tree</h3>
+                        </div>
+
+                        <div class="add">
+                            <i class="plus icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="page" id="message_page" hidden>messages</div> -->
+    </main>
+
+    <nav id="nav">
+        <ul class="menu">
+            <li class="nav-menu-item" id="home"><i class="icon home"></i></li>
+            <li class="nav-menu-item" id="explore"><i class="icon compass"></i></li>
+            <!-- <li class="nav-menu-item" id="message"><i class="icon comments"></i></li> -->
+            <li class="nav-menu-item" id="profile"><i class="icon user"></i></li>
+        </ul>
+    </nav>
+
+    <script src="src/main.js"></script>
+</body>
+</html>

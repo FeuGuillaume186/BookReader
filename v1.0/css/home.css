@@ -1,0 +1,164 @@
+
+
+#home_page .follow .follow-title {
+    padding-left: 1.81rem;
+}
+
+#home_page .follow .book-list {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 0 0 1.2rem 1.81rem;
+}
+
+#home_page .follow .book-list .book {
+    /* layout */
+    width: 17.5625rem;
+    height: 16.5625rem;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: flex-end;
+    padding: 1.15rem;
+    margin-right: 1.31rem;
+
+    border-radius: 1.25rem;
+    background: url(../assets/cover/IMG_0005.JPG), lightgray 50% / cover no-repeat;
+    background-size: cover;
+    color: var(--secondaryColor);
+}
+
+/* TEMPoraire */
+#home_page .follow .book-list .book:nth-child(2) {
+    background: url(../assets/cover/IMG_0009.JPG), lightgray 50% / cover no-repeat;
+    background-size: cover;
+}
+#home_page .follow .book-list .book:nth-child(3) {
+    background: url(../assets/cover/IMG_0002.JPG), lightgray 50% / cover no-repeat;
+    background-size: cover;
+}
+#home_page .follow .book-list .book:nth-child(4) {
+    background: url(../assets/cover/IMG_0012.JPG), lightgray 50% / cover no-repeat;
+    background-size: cover;
+}
+#home_page .follow .book-list .book:nth-child(5) {
+    background: url(../assets/cover/IMG_0010.JPG), lightgray 50% / cover no-repeat;
+    background-size: cover;
+}
+#home_page .follow .book-list .book:nth-child(6) {
+    background: url(../assets/cover/IMG_0007.JPG), lightgray 50% / cover no-repeat;
+    background-size: cover;
+}
+
+/* TEMPoraire */
+#home_page .popular .book-list .book:nth-child(1) {
+    background: url(../assets/cover/IMG_0018.JPG), lightgray 50% / cover no-repeat;
+    background-size: cover;
+}
+#home_page .popular .book-list .book:nth-child(2) {
+    background: url(../assets/cover/IMG_0011.JPG), lightgray 50% / cover no-repeat;
+    background-size: cover;
+}
+#home_page .popular .book-list .book:nth-child(3) {
+    background: url(../assets/cover/IMG_0003.JPG), lightgray 50% / cover no-repeat;
+    background-size: cover;
+}
+#home_page .popular .book-list .book:nth-child(4) {
+    background: url(../assets/cover/IMG_0012.JPG), lightgray 50% / cover no-repeat;
+    background-size: cover;
+}
+#home_page .popular .book-list .book:nth-child(5) {
+    background: url(../assets/cover/IMG_0024.JPG), lightgray 50% / cover no-repeat;
+    background-size: cover;
+}
+#home_page .popular .book-list .book:nth-child(6) {
+    background: url(../assets/cover/IMG_0006.JPG), lightgray 50% / cover no-repeat;
+    background-size: cover;
+}
+
+
+#home_page .popular .popular-title {
+    padding-left: 1.81rem;
+}
+
+#home_page .popular .book-list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 0 1.81rem 7.44rem 1.81rem;
+}
+
+#home_page .popular .book-list .book {
+    /* layout */
+    width: 100%;
+    height: 504px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: flex-end;
+    padding: 0.5rem;
+    margin-bottom: 1.31rem;
+
+    /* style */
+    border-radius: 1.25rem;
+    color: var(--secondaryColor);
+}
+
+#home_page .popular .book-list .book .book-infos {
+    padding: 1rem;
+    width: 100%;
+    
+    border-radius: 1rem;
+    background: rgba(197, 197, 197, 0.40);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#home_page .popular .book-list .book .book-tags {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 20rem;
+}
+#home_page .popular .book-list .book .book-tags .tag {
+    margin-right: 5px;
+    color: var(--highlight-deamed);
+}
+
+#home_page .popular .book-list .book .book-about {
+    overflow: hidden;
+    height: 4rem;
+    width: 20rem;
+}
+
+#home_page .popular .book-list .book .book-activity {
+    opacity: 1;
+    position: absolute;
+    right: 2.01rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+#home_page .popular .book-list .book .book-activity span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0.3rem;
+}
+#home_page .popular .book-list .book .book-activity span i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    padding: 1.5rem;
+
+    border-radius: 50%;
+    background: #FFFFFF55;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
