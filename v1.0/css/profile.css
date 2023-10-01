@@ -18,7 +18,7 @@
     border-radius: 0 0 2rem 2rem;
     background: url(../assets/avatar/large/elyse.png) no-repeat;
     background-size: cover;
-    background-position: 0%;
+    background-position: 50%;
 }
 
 #profile_page .functions .button {

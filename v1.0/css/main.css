@@ -17,7 +17,7 @@
     width: 100vw;
     padding: 0 1.81rem 1.44rem 1.81rem;
     
-    z-index: 9999;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +79,7 @@
     padding: 0 1.81rem 1.2rem 1.81rem;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
-    z-index: 9999;
+    z-index: 999;
 
     background: var(--background);
 }
@@ -101,4 +101,27 @@
     outline: none;
     background: transparent;
     color: var(--foreground);
+}
+
+#comments_modal_window {
+    padding: 1.2rem;
+    width: fit-content;
+    border-radius: 1rem;
+}
+
+#comments_modal_window .comments .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#comments_modal_window .comments .header i {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+#comments_modal_window .comments .header i:hover {
+    color: rgb(233, 45, 45);
 }

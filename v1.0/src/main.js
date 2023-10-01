@@ -1,15 +1,3 @@
-// Principal Navigation
-const app = document.getElementById('app');
-const nav = document.getElementById('nav');
-
-//--[define height of page on load, scroll or resize]------
-const dHeight = () => {
-    app.style.height = (window.innerHeight - 60) + 'px';
-}
-
-window.addEventListener('load', dHeight);
-window.addEventListener('resize', dHeight);
-window.addEventListener('scroll', dHeight);
 
 //--[Gestion des evenements de la nav bar]-----------------
 const menuItems = document.querySelectorAll('.nav-menu-item');
