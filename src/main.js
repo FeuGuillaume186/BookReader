@@ -90,6 +90,7 @@ menuItems.forEach((item) => {
 // Dark - Light Mode
 const darkmode = document.getElementById('toggle-darkmode')
 const lightmode = document.getElementById('toggle-lightmode')
+const osmode = document.getElementById('toggle-osmode')
 let currentThemeMode = localStorage.getItem('themeMode')
 
 const setThemeMode = () => {
@@ -101,6 +102,10 @@ const setThemeMode = () => {
             // Le thème clair est préféré par l'utilisateur
             currentThemeMode = 'light'
         }
+        lightmode.classList.remove('violet')
+        darkmode.classList.remove('violet')
+        if(!osmode.classList.contains('purple'))
+        osmode.classList.add('purple')
     }
 
     if(currentThemeMode == 'dark') {
@@ -125,12 +130,22 @@ darkmode
         currentThemeMode = 'dark'
         localStorage.setItem('themeMode', currentThemeMode)
         setThemeMode()
+        osmode.classList.remove('purple')
     }
 ;
 
 lightmode
     .onclick = () => {
         currentThemeMode = 'light'
+        localStorage.setItem('themeMode', currentThemeMode)
+        setThemeMode()
+        osmode.classList.remove('purple')
+    }
+;
+
+osmode
+    .onclick = () => {
+        currentThemeMode = 'os'
         localStorage.setItem('themeMode', currentThemeMode)
         setThemeMode()
     }
