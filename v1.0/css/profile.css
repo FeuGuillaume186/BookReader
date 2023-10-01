@@ -1,10 +1,12 @@
 
-#profile_page {
+#profile_page,
+#other_profile_modal_window {
     display: flex;
     flex-direction: column;
 }
 
-#profile_page .profile-photo {
+#profile_page .profile-photo,
+#other_profile_modal_window .profile-photo {
     position: fixed;
     top: 0;
     display: flex;
@@ -21,14 +23,16 @@
     background-position: 50%;
 }
 
-#profile_page .functions .button {
+#profile_page .functions .button,
+#other_profile_modal_window .functions .button {
     background: transparent !important;
     color: #FFFFFF !important;
     border: 1px solid #FFFFFF !important;
     margin: 1.44rem;
 }
 
-#profile_page .profile-activity {
+#profile_page .profile-activity,
+#other_profile_modal_window .profile-activity {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -36,25 +40,29 @@
     /* transform: translateY(-4.5rem); */
 }
 
-#profile_page .profile-activity div {
+#profile_page .profile-activity div,
+#other_profile_modal_window .profile-activity div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#profile_page .profile-activity .value {
+#profile_page .profile-activity .value,
+#other_profile_modal_window .profile-activity .value {
     font-size: 1.7rem;
     font-weight: 600;
     color: #FFFFFF;
 }
-#profile_page .profile-activity label {
+#profile_page .profile-activity label,
+#other_profile_modal_window .profile-activity label {
     text-transform: capitalize;
     margin-top: 0.3rem;
 
     color: hsl(0, 0%, 60%);
 }
 
-#profile_page .profile-others {
+#profile_page .profile-others,
+#other_profile_modal_window .profile-others {
     position: absolute;
     bottom: 0;
     width: 100vw;
@@ -67,7 +75,8 @@
 
 }
 
-#profile_page .profile-others .identification {
+#profile_page .profile-others .identification,
+#other_profile_modal_window .profile-others .identification {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,28 +85,25 @@
     padding-bottom: 0;
 }
 
-#profile_page .profile-others .identification .text {
+#profile_page .profile-others .identification .text,
+#other_profile_modal_window .profile-others .identification .text {
     display: flex;
     flex-direction: column;
     line-height: 1.6rem;
 }
 
-#profile_page .profile-others .identification .text .name {
+#profile_page .profile-others .identification .text .name,
+#other_profile_modal_window .profile-others .identification .text .name {
     font-size: 1.2rem;
     font-weight: 600;
 }
-#profile_page .profile-others .identification .text .mail {
+#profile_page .profile-others .identification .text .mail,
+#other_profile_modal_window .profile-others .identification .text .mail {
     color: hsl(0, 0%, 50%);
 }
 
-#profile_page .profile-others .identification .button {
-    /* display: none; */
-    background-color: transparent !important;
-    color: var(--foreground) !important;
-    border: 1px solid var(--foreground) !important;
-}
-
-#profile_page .profile-others .about {
+#profile_page .profile-others .about,
+#other_profile_modal_window .profile-others .about {
     padding: 1.81rem;
     padding-bottom: 0;
     padding-top: 0;
@@ -105,17 +111,21 @@
 }
 
 #profile_page .profile-others .about label,
-#profile_page .profile-others .my-books label {
+#profile_page .profile-others .my-books label,
+#other_profile_modal_window .profile-others .about label,
+#other_profile_modal_window .profile-others .my-books label {
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 2rem;
 }
-#profile_page .profile-others .about p {
+#profile_page .profile-others .about p,
+#other_profile_modal_window .profile-others .about p {
     font-size: .87rem;
     font-weight: 200;
 }
 
-#profile_page .profile-others .my-books {
+#profile_page .profile-others .my-books,
+#other_profile_modal_window .profile-others .my-books {
     background: var(--profile-othersInfoColor);
 
     padding: 1.81rem;
@@ -124,7 +134,8 @@
     width: 100%;
 }
 
-#profile_page .profile-others .my-books .list {
+#profile_page .profile-others .my-books .list,
+#other_profile_modal_window .profile-others .my-books .list {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     justify-content: center;
@@ -132,7 +143,8 @@
     padding-bottom: 7rem;
     margin-top: .37rem;
 }
-#profile_page .profile-others .my-books .list .book {
+#profile_page .profile-others .my-books .list .book,
+#other_profile_modal_window .profile-others .my-books .list .book {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,7 +154,8 @@
     /* border: 1px dashed; */
 }
 #profile_page .profile-others .my-books .list .book .book-cover, 
-#profile_page .profile-others .my-books .list .add {
+#profile_page .profile-others .my-books .list .add,
+#other_profile_modal_window .profile-others .my-books .list .book .book-cover {
     width: 100%;
     height: 140px;
     flex-shrink: 0;
@@ -212,7 +225,8 @@
 }
 
 
-#profile_page .profile-others .my-books .list .book .book-title {
+#profile_page .profile-others .my-books .list .book .book-title,
+#other_profile_modal_window .profile-others .my-books .list .book .book-title {
     height: 3.2rem;
     overflow: hidden;
     padding: 0;

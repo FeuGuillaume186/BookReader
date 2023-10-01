@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+
     font-family: 'Inter', sans-serif;
 }
 
@@ -16,15 +16,16 @@
     bottom: 0;
     width: 100vw;
     padding: 0 1.81rem 1.44rem 1.81rem;
-    
+
     z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     /* border: 1px dashed; */
     background-image: linear-gradient(to bottom, var(--gradient-secondColor), var(--gradient-firstColor));
 }
+
 .nav-menu {
     display: flex;
     align-items: center;
@@ -41,6 +42,7 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     list-style: none;
 }
+
 .nav-menu .nav-menu-item {
     text-align: center;
     display: flex;
@@ -53,17 +55,20 @@
     font-size: 1.8rem;
     cursor: pointer;
 }
+
 .nav-menu .nav-menu-item.active {
     color: var(--highlight);
     border-radius: 0.9375rem;
     background: var(--navbarActiveItem);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 .nav-menu .nav-menu-item i {
     position: relative;
     top: 4px;
     left: 2px;
 }
+
 .nav-menu .nav-menu-item:nth-child(1) {
     padding-left: 0;
 }
@@ -83,18 +88,22 @@
 
     background: var(--background);
 }
+
 #topbar .tools {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 #topbar .tools .tool-notif {
     margin: 0 10px 0 10px;
 }
+
 #topbar .tools .tool-search {
     display: flex;
     border-radius: 0.5rem;
 }
+
 #topbar .tools .tool-search input {
     transition: width 0.3s;
     border: none;
@@ -120,8 +129,57 @@
     align-items: center;
     justify-content: flex-end;
     margin: 0;
+    width: fit-content;
+
+    cursor: pointer;
 }
 
 #comments_modal_window .comments .header i:hover {
     color: rgb(233, 45, 45);
+}
+
+#comments_modal_window textarea {
+    resize: none;
+}
+
+#comments_modal_window .comments .list {
+    height: 45vh;
+    overflow-y: auto;
+}
+
+
+#other_profile_modal_window {
+    height: 100vh;
+    width: 100vw;
+    border-radius: none;
+    background: var(--background);
+}
+
+#other_profile_modal_window .profile-photo {
+    align-items: flex-start !important;
+    background: url(../assets/avatar/photo/IMG_2636.JPG) no-repeat !important;
+    background-size: cover !important;
+    background-position: 50% !important;
+}
+
+#other_profile_modal_window .profile-others {
+    height: 44.3% !important;
+}
+
+#other_profile_modal_window .profile-others .identification .button {
+    background-color: transparent !important;
+    color: var(--foreground) !important;
+    border: 1px solid var(--foreground) !important;
+}
+
+#other_profile_modal_window .profile-others .my-books .list .book:nth-child(1) .book-cover {
+    background: url(../assets/cover/IMG_0028.JPG) no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+#other_profile_modal_window .profile-others .my-books .list .book:nth-child(2) .book-cover {
+    background: url(../assets/cover/IMG_0030.JPG) no-repeat;
+    background-size: cover;
+    background-position: 100%;
 }

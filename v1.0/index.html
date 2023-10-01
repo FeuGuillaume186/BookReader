@@ -39,75 +39,134 @@
     <!-- LES FENETRES MODALS -->
     <div class="ui modal comments_modal_window" id="comments_modal_window">
         <div class="ui minimal comments">
-            <h3 class="ui header">Commentaires <i class="close icon" id="comments_modal_window_close_button"></i></h3>
-            <div class="comment">
-                <a class="avatar">
-                    <img src="assets/avatar/large/matthew.png">
-                </a>
-                <div class="content">
-                    <a class="author">Matt</a>
-                    <div class="metadata">
-                        <span class="date">Aujourd'hui à 17h42</span>
+            <h3 class="ui header">Commentaires (5)<i class="close icon" id="comments_modal_window_close_button"></i></h3>
+            <div class="list">
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="assets/avatar/large/matthew.png">
+                    </a>
+                    <div class="content">
+                        <a class="author">Matt</a>
+                        <div class="metadata">
+                            <span class="date">Aujourd'hui à 17h42</span>
+                        </div>
+                        <div class="text">Tellement artistique ! </div>
                     </div>
-                    <div class="text">Tellement artistique ! </div>
+                </div>
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="assets/avatar/photo/IMG_2631.JPG">
+                    </a>
+                    <div class="content">
+                        <a class="author">Elliot Fu</a>
+                        <div class="metadata">
+                            <span class="date">Hier à 12h30</span>
+                        </div>
+                        <div class="text">
+                            <p>C'était très utile pour ma recherche. Merci bien !</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="assets/avatar/photo/IMG_2615.JPG">
+                    </a>
+                    <div class="content">
+                        <a class="author">Polina</a>
+                        <div class="metadata">
+                            <span class="date">Il y a 7 jours</span>
+                        </div>
+                        <div class="text">C'est super ! Incroyable livre bravo c'est fantastique</div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="assets/avatar/photo/IMG_2636.JPG">
+                    </a>
+                    <div class="content">
+                        <a class="author">Eva Rosie</a>
+                        <div class="metadata">
+                            <span class="date">Il y a 5 jours</span>
+                        </div>
+                        <div class="text">joli </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="assets/avatar/photo/IMG_2639.JPG">
+                    </a>
+                    <div class="content">
+                        <a class="author">Joe Henderson</a>
+                        <div class="metadata">
+                            <span class="date">Il y a 5 jours</span>
+                        </div>
+                        <div class="text">C'est super ! Merci mille fois </div>
+                    </div>
                 </div>
             </div>
-            <div class="comment">
-                <a class="avatar">
-                    <img src="assets/avatar/photo/IMG_2631.JPG">
-                </a>
-                <div class="content">
-                    <a class="author">Elliot Fu</a>
-                    <div class="metadata">
-                        <span class="date">Hier à 12h30</span>
-                    </div>
-                    <div class="text">
-                        <p>C'était très utile pour ma recherche. Merci bien !</p>
-                    </div>
+        </div>
+        <form class="ui reply form">
+            <div class="field">
+                <textarea placeholder="Ecrire un commentaire"></textarea>
+            </div>
+            <div class="ui blue labeled submit icon button"><i class="icon send"></i> Envoyer </div>
+        </form>
+    </div>
+
+    <div class="ui modal other_profile_modal_window" id="other_profile_modal_window">
+        <div class="profile-photo">
+            <div class="functions">
+                <button class="ui circular basic button icon" id="other_profile_modal_window_close_button"><i class="close icon"></i></button>
+            </div>
+            <div class="profile-activity">
+                <div class="followers">
+                    <span class="value">2.5k</span>
+                    <label>Abonnés</label>
+                </div>
+                <div class="following">
+                    <span class="value">134</span>
+                    <label>Abonnements</label>
+                </div>
+                <div class="books-number">
+                    <span class="value">2</span>
+                    <label>livre(s)</label>
                 </div>
             </div>
-            <div class="comment">
-                <a class="avatar">
-                    <img src="assets/avatar/photo/IMG_2615.JPG">
-                </a>
-                <div class="content">
-                    <a class="author">Polina</a>
-                    <div class="metadata">
-                        <span class="date">Il y a 7 jours</span>
-                    </div>
-                    <div class="text">C'est super ! Incroyable livre bravo c'est fantastique</div>
+        </div>
+
+        <div class="profile-others">
+            <div class="identification">
+                <div class="text">
+                    <span class="name">Molly Dee</span>
+                    <span class="mail">mollydee@gmail.com</span>
+                </div>
+                <div class="ui vertical animated basic circular button" tabindex="0">
+                    <div class="hidden content">Abonné</div>
+                    <div class="visible content">S'abonner</div>
                 </div>
             </div>
-            <div class="comment">
-                <a class="avatar">
-                    <img src="assets/avatar/photo/IMG_2636.JPG">
-                </a>
-                <div class="content">
-                    <a class="author">Eva Rosie</a>
-                    <div class="metadata">
-                        <span class="date">Il y a 5 jours</span>
+
+            <div class="about">
+                <label>A propos</label>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt earum esse, eius ex similique odit
+                    impedit blanditiis atque, alias enim dolores iure veritatis ducimus magni at deserunt saepe ad
+                    est.</p>
+            </div>
+
+            <div class="my-books">
+                <label>Mes Oeuvres (2)</label>
+                <div class="list">
+                    <div class="book">
+                        <div class="book-cover"></div>
+                        <h3 class="book-title">Singer Of The Flowers pink</h3>
                     </div>
-                    <div class="text">joli </div>
+                    <div class="book">
+                        <div class="book-cover"></div>
+                        <h3 class="book-title">Beautiful Sky</h3>
+                    </div>
+                    
                 </div>
             </div>
-            <div class="comment">
-                <a class="avatar">
-                    <img src="assets/avatar/photo/IMG_2639.JPG">
-                </a>
-                <div class="content">
-                    <a class="author">Joe Henderson</a>
-                    <div class="metadata">
-                        <span class="date">Il y a 5 jours</span>
-                    </div>
-                    <div class="text">C'est super ! Merci mille fois </div>
-                </div>
-            </div>
-            <form class="ui reply form">
-                <div class="field">
-                    <textarea></textarea>
-                </div>
-                <div class="ui blue labeled submit icon button"><i class="icon edit"></i> Ajouter un commentaire </div>
-            </form>
         </div>
     </div>
 
@@ -116,9 +175,8 @@
             <div class="ui top left pointing dropdown" id="current-user">
                 <img class="ui avatar image mini" src="assets/avatar/large/elyse.png" />
                 <div class="menu">
-                    <div class="header">Ely Monade</div>
+                    <div class="header" onclick="showPage('profile')">Ely Monade</div>
                     <div class="ui divider"></div>
-                    <div class="item">Voir Votre Page de Profile</div>
                     <div class="item">Publier un Livre</div>
                     <div class="item">Déconnexion</div>
                     <div class="ui divider"></div>
@@ -165,7 +223,7 @@
                     <div class="book">
                         <div class="info">
                             <h1 class="book-title">Captain Ship</h1>
-                            <div class="user">
+                            <div class="book-author button">
                                 <img class="ui avatar image" src="assets/avatar/large/matthew.png" alt="">
                                 <span>Matthew</span>
                             </div>
@@ -174,7 +232,7 @@
                     <div class="book">
                         <div class="info">
                             <h1 class="book-title">Twilight Princess</h1>
-                            <div class="user">
+                            <div class="book-author button">
                                 <img class="ui avatar image" src="assets/avatar/large/elyse.png" alt="">
                                 <span>Elyse</span>
                             </div>
@@ -183,7 +241,7 @@
                     <div class="book">
                         <div class="info">
                             <h1 class="book-title">The Revelation</h1>
-                            <div class="user">
+                            <div class="book-author button">
                                 <img class="ui avatar image" src="assets/avatar/large/kristy.png" alt="">
                                 <span>kristy</span>
                             </div>
@@ -192,7 +250,7 @@
                     <div class="book">
                         <div class="info">
                             <h1 class="book-title">Sunset</h1>
-                            <div class="user">
+                            <div class="book-author button">
                                 <img class="ui avatar image" src="assets/avatar/large/molly.png" alt="">
                                 <span>Molly</span>
                             </div>
@@ -201,7 +259,7 @@
                     <div class="book">
                         <div class="info">
                             <h1 class="book-title">Ookami</h1>
-                            <div class="user">
+                            <div class="book-author button">
                                 <img class="ui avatar image" src="assets/avatar/large/kristy.png" alt="">
                                 <span>kristy</span>
                             </div>
@@ -210,7 +268,7 @@
                     <div class="book">
                         <div class="info">
                             <h1 class="book-title">The Cameras</h1>
-                            <div class="user">
+                            <div class="book-author button">
                                 <img class="ui avatar image" src="assets/avatar/large/matthew.png" alt="">
                                 <span>Matthew</span>
                             </div>
@@ -223,8 +281,8 @@
                 <h1 class="popular-title">Populaires</h1>
                 <div class="book-list">
                     <div class="book">
-                        <aside class="book-infos">
-                            <div class="book-author">
+                        <aside class="book-infos read button">
+                            <div class="book-author button">
                                 <img class="ui avatar image" src="assets/avatar/large/molly.png" alt="">
                                 <span class="name">Molly Dee</span>
                             </div>
@@ -249,13 +307,13 @@
                             </span>
                             <span class="comment button">
                                 <i class="comment alternate icon"></i>
-                                <label>340</label>
+                                <label>5</label>
                             </span>
                             <span class="share">
                                 <i class="share icon"></i>
                                 <label>13</label>
                             </span>
-                            <span class="read">
+                            <span class="read button">
                                 <i class="eye icon"></i>
                                 <label>2.6k</label>
                             </span>
@@ -384,10 +442,6 @@
                         <span class="name">Ely Monade</span>
                         <span class="mail">elimonade@gmail.com</span>
                     </div>
-                    <div class="ui vertical animated basic circular button" tabindex="0">
-                        <div class="hidden content">Abonné</div>
-                        <div class="visible content">S'abonner</div>
-                    </div>
                 </div>
 
                 <div class="about">
@@ -455,7 +509,21 @@
             .modal('setting', 'transition', 'fly up')
             .modal('attach events', '.comment.button', 'show')
             .modal('attach events', '#comments_modal_window_close_button', 'hide')
-        ;
+            ;
+
+        document.querySelector('.comment.button').addEventListener('click', () => {
+            $('.comment.button').transition('jiggle');
+        })
+
+        $('#other_profile_modal_window')
+            .modal('setting', 'transition', 'fly up')
+            .modal('attach events', '.book-author.button', 'show')
+            .modal('attach events', '#other_profile_modal_window_close_button', 'hide')
+            ;
+
+        document.querySelector('.book-author.button').addEventListener('click', () => {
+            $('.book-author.button').transition('pulse');
+        })
     </script>
 </body>
 
