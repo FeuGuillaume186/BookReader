@@ -34,10 +34,27 @@
 </head>
 
 <body class="">
-    <main id="app">
+    <main class="prevent-select" id="app">
         <header id="topbar">
-            <div class="current-user">
+            <div class="ui top left pointing dropdown" id="current-user">
                 <img class="ui avatar image mini" src="assets/avatar/large/elyse.png" />
+                <div class="menu">
+                    <div class="header">Ely Monade</div>
+                    <div class="ui divider"></div>
+                    <div class="item">Voir Votre Page de Profile</div>
+                    <div class="item">Publier un Livre</div>
+                    <div class="item">Déconnexion</div>
+                    <div class="ui divider"></div>
+                    <div class="header">pins</div>
+                    <div class="item">
+                        <i class="pin icon"></i>
+                        Night Shift
+                    </div>
+                    <div class="item">
+                        <i class="pin icon"></i>
+                        Princess éleanor
+                    </div>
+                </div>
             </div>
 
             <div class="tools">
@@ -431,12 +448,12 @@
             <div class="profile-others">
                 <div class="identification">
                     <div class="text">
-                        <span class="name">Eli Monade</span>
+                        <span class="name">Ely Monade</span>
                         <span class="mail">elimonade@gmail.com</span>
                     </div>
                     <div class="ui vertical animated basic circular button" tabindex="0">
-                        <div class="hidden content">Suivi</div>
-                        <div class="visible content">Suivre</div>
+                        <div class="hidden content">Abonné</div>
+                        <div class="visible content">S'Abonner</div>
                     </div>
                 </div>
 
@@ -484,8 +501,8 @@
         <!-- <div class="page" id="message_page" hidden>messages</div> -->
     </main>
 
-    <nav id="nav">
-        <ul class="menu">
+    <nav class="prevent-select" id="nav">
+        <ul class="nav-menu">
             <li class="nav-menu-item" id="home"><i class="icon home"></i></li>
             <li class="nav-menu-item" id="explore"><i class="icon compass"></i></li>
             <!-- <li class="nav-menu-item" id="message"><i class="icon comments"></i></li> -->
@@ -494,5 +511,12 @@
     </nav>
 
     <script src="src/main.js"></script>
+    <script>
+        $('#current-user').dropdown();
+
+        document.getElementById('current-user').addEventListener('click', () => {
+            $('#current-user').transition('pulse');
+        });
+    </script>
 </body>
 </html>
