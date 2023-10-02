@@ -95,21 +95,17 @@ const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
 let currentThemeMode = localStorage.getItem('themeMode')
 
 const setThemeMode = (event) => {
-    if(currentThemeMode == 'os') {
+    if(localStorage.getItem("defaultMode") == 'true') {
         if(event.matches) {
             // Le thème sombre est préféré par l'utilisateur
             currentThemeMode = 'dark'
+            console.log('dark')
         } else {
             // Le thème clair est préféré par l'utilisateur
             currentThemeMode = 'light'
+            console.log('light')
         }
-        // if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        //     // Le thème sombre est préféré par l'utilisateur
-        //     currentThemeMode = 'dark'
-        // } else {
-        //     // Le thème clair est préféré par l'utilisateur
-        //     currentThemeMode = 'light'
-        // }
+        
         lightmode.classList.remove('violet')
         darkmode.classList.remove('violet')
         if(!osmode.classList.contains('purple'))
@@ -117,6 +113,8 @@ const setThemeMode = (event) => {
     }
 
     if(currentThemeMode == 'dark') {
+        localStorage.setItem('themeMode', currentThemeMode)
+        
         lightmode.classList.remove('violet')
         if(!darkmode.classList.contains('violet'))
             darkmode.classList.add('violet')
@@ -124,6 +122,8 @@ const setThemeMode = (event) => {
             document.body.classList.add('dark')
     }
     else if(currentThemeMode == 'light') {
+        localStorage.setItem('themeMode', currentThemeMode)
+
         darkmode.classList.remove('violet')
         if(!lightmode.classList.contains('violet'))
             lightmode.classList.add('violet')
@@ -131,32 +131,33 @@ const setThemeMode = (event) => {
     }
 }
 
-mediaQuery.addEventListener(setThemeMode)
+mediaQuery.addListener(setThemeMode)
 setThemeMode(mediaQuery)
 
 darkmode
     .onclick = () => {
-        currentThemeMode = 'dark'
-        localStorage.setItem('themeMode', currentThemeMode)
-        setThemeMode()
+        localStorage.setItem('defaultMode', 'false')
         osmode.classList.remove('purple')
+        
+        currentThemeMode = 'dark'
+        setThemeMode(mediaQuery)
     }
 ;
 
 lightmode
     .onclick = () => {
-        currentThemeMode = 'light'
-        localStorage.setItem('themeMode', currentThemeMode)
-        setThemeMode()
+        localStorage.setItem('defaultMode', 'false')
         osmode.classList.remove('purple')
+        
+        currentThemeMode = 'light'
+        setThemeMode(mediaQuery)
     }
 ;
 
 osmode
     .onclick = () => {
-        currentThemeMode = 'os'
-        localStorage.setItem('themeMode', currentThemeMode)
-        setThemeMode()
+        localStorage.setItem('defaultMode', 'true')
+        setThemeMode(mediaQuery)
     }
 ;
 
