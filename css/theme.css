@@ -2,16 +2,15 @@
 
 :root {
     --foreground: #000000;
-    --background: hsl(0, 0%, 91%);
+    --background: hsl(0, 0%, 100%);
     --secondaryColor: #FFFFFF;
-    --navbarBackground: hsl(0, 0%, 86%);
-    --navbarActiveItem: hsl(0, 0%, 90%);
+    --navbarBackground: hsl(0, 0%, 90%);
+    --navbarActiveItem: hsl(0, 0%, 95%);
     --highlight: #5E2ACA;
     --highlight-deamed: hsl(260, 66%, 80%);
     --gradient-firstColor: hsl(0, 0%, 86%);
     --gradient-secondColor: hsla(0, 0%, 91%, 0.02);
-    --profile-othersInfoColor: hsl(0, 0%, 10%);
-    --profile-othersInfoColor: hsl(0, 0%, 90%);
+    --profile-othersInfoColor: hsl(0, 0%, 100%);
 }
 
 ::-webkit-scrollbar {
@@ -28,8 +27,7 @@ body.dark {
     --highlight-deamed: hsl(260, 66%, 80%);
     --gradient-firstColor: hsl(0, 0%, 14%);
     --gradient-secondColor: hsla(0, 0%, 9%, 0.02);
-    --profile-othersInfoColor: hsl(0, 0%, 90%);
-    --profile-othersInfoColor: hsl(0, 0%, 10%);
+    --profile-othersInfoColor: hsl(0, 0%, 9%);
 }
 
 body {

@@ -18,14 +18,35 @@
 }
 #app #explore_page .buttons .filter {
     font-size: 1.8rem;
+
+    /* border: 1px dashed; */
 }
+
+#app #explore_page .buttons .filter i.sliders.horizontal.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0;
+}   
 
 #app #explore_page .book-list {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    justify-content: center;
     gap: 0.94rem;
     padding-bottom: 6rem;
+}
+
+@media screen and (min-width: 426px) {
+    #app #explore_page .book-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        /* gap: 0.94rem; */
+    }
+    #app #explore_page .book-list .book {
+        margin-right: 0.94rem;
+    }
 }
 
 #app #explore_page .book-list .book {

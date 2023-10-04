@@ -138,7 +138,6 @@
 #other_profile_modal_window .profile-others .my-books .list {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    justify-content: center;
     gap: 0.94rem;
     padding-bottom: 7rem;
     margin-top: .37rem;
@@ -241,6 +240,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100px;
 
     font-size: 4rem;
     background: var(--navbarBackground);
@@ -251,4 +251,31 @@
     align-items: center;
     justify-content: center;
     color: var(--foreground);
+}
+
+
+@media screen and (min-width: 426px) {
+    #profile_page .profile-photo {
+        width: calc(100vw - (4.6875rem + 1.81rem)) !important;
+    }
+
+    #profile_page .profile-others {
+        display: flex;
+        flex-direction: column;
+        width: calc(100vw - (4.6875rem + 1.81rem)) !important;
+        background: var(--background);
+    }
+
+    #profile_page .profile-others .my-books .list,
+    #other_profile_modal_window .profile-others .my-books .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        /* gap: 0.94rem; */
+    }
+    #profile_page .profile-others .my-books .list .add,
+    #profile_page .profile-others .my-books .list .book,
+    #other_profile_modal_window .profile-others .my-books .list .book {
+        margin-right: 0.94rem;
+    }
 }
