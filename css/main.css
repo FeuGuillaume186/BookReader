@@ -188,8 +188,8 @@
 }
 
 #comments_modal_window {
-    display: none !important;
-    padding: 1.2rem !important;
+    padding: 1.2rem;
+    width: fit-content;
     border-radius: 1rem;
 }
 
